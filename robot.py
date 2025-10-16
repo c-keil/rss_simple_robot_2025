@@ -238,7 +238,7 @@ if __name__ == "__main__":
     # time.sleep(2)
 
     #set robot position
-    pos = [0.1, 0.1, 0.1, 0.1]
+    pos = [0.1, 0.1, 0.1]
     print("commanding joint positions {}".format(pos))
     _ = input("Hit Enter to Continue")
     robot.set_joint_positions(pos)
@@ -254,7 +254,7 @@ if __name__ == "__main__":
 
     #check fk for positions outside joint lims
     ## pb automatically wraps the joint lims
-    pos = [100, 100, 100, 100]
+    pos = [100, 100, 100]
     print("checking fk for {}".format(pos))
     ee_psoition, _ = robot.forward_kinematics(pos)
     print("ee_position for joints {} is {}".format(pos, ee_psoition))
